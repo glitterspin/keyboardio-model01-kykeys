@@ -174,7 +174,7 @@ KEYMAPS(
 
 #if defined (PRIMARY_KEYMAP_QWERTY)
   [PRIMARY] = KEYMAP_STACKED
-  (___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
+  (___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_CapsLock,
    Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,
    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
@@ -229,10 +229,10 @@ KEYMAPS(
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           Key_CapsLock,
-   Key_Tab,  ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
-   Key_Home, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_Tab,
-   Key_End,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
+  (Key_LEDEffectNext, Key_F1,           Key_F2,      Key_F3,           Key_F4,        Key_F5,          ___,
+   Key_Tab,           ___,              Key_mouseUp, Key_mouseWarpEnd, Key_mouseBtnR, Key_mouseWarpNW, Key_mouseWarpNE,
+   Key_Home,          Key_mouseL,       Key_mouseDn, Key_mouseR,       Key_mouseBtnL, Key_mouseWarpW,
+   Key_End,           Key_PrintScreen,  Key_Insert,  ___,              Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
    ___, Key_Delete, ___, ___,
    ___,
 
@@ -240,7 +240,7 @@ KEYMAPS(
    Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
                                Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  ___,              ___,
    Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
-   ___, ___, Key_Enter, ___,
+   ___, ___, ___, ___,
    ___)
 ) // KEYMAPS(
 
@@ -528,6 +528,11 @@ void setup() {
   // maps for. To make things simple, we set it to five layers, which is how
   // many editable layers we have (see above).
   ColormapEffect.max_layers(5);
+
+  //  mouse stuff, my own custom code. I found it from 
+  //  https://community.keyboard.io/t/do-you-use-the-keyboards-mouse-controls/501/23
+  MouseKeys.speed=24;
+  MouseKeys.speedDelay=3;
 }
 
 /** loop is the second of the standard Arduino sketch functions.
