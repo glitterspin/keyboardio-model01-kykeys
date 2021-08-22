@@ -214,13 +214,13 @@ KEYMAPS(
    ___,                    ___, Key_0, Key_Period, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter,
    ___, ___, ___, ___,
    ___),
-
+ 
   [FUNCTION] =  KEYMAP_STACKED
   (Key_LEDEffectNext, Key_F1,           Key_F2,          Key_F3,         Key_F4,          Key_F5,           Key_mouseWarpNE,
    ___,               ___,              Key_mouseBtnR,   Key_mouseUp,    Key_mouseWarpNW, Key_mouseWarpNE,  Key_mouseScrollUp, 
    Key_mouseScrollUp, Key_mouseBtnL,    Key_mouseL,      Key_mouseDn,    Key_mouseR,      Key_mouseWarpSE,
    Key_mouseScrollDn, Key_PrintScreen,  Key_Insert,      ___,            Key_mouseBtnM,   Key_mouseWarpSW,  Key_mouseR,
-   ___, Key_Delete, ___, ___,
+   ___,  ___, Key_Delete, ___,
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,               Key_F11,
