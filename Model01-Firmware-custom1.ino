@@ -219,13 +219,13 @@ KEYMAPS(
   (Key_LEDEffectNext, Key_F1,           Key_F2,           Key_F3,        Key_F4,        Key_F5,          Key_mouseWarpNE,
    ___,               ___,              Key_mouseWarpNW, Key_mouseUp,    Key_mouseWarpNE, Key_mouseBtnM,
    Key_mouseScrollUp, Key_mouseBtnR,    Key_mouseBtnL,   Key_mouseL,     Key_mouseDn,   Key_mouseR,      Key_mouseWarpSE,
-   Key_mouseScrollDn, Key_PrintScreen,  Key_Insert,      ___,            Key_mouseBtnM, Key_mouseWarpSW, Key_mouseWarpSE,
+   Key_mouseScrollDn, Key_PrintScreen,  Key_Insert,      ___,            Key_mouseBtnM, Key_mouseWarpSW, Key_mouseR,
    ___, Key_Delete, ___, ___,
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,               Key_F11,
    Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_UpArrow,              Key_LeftBracket, Key_RightBracket,      Key_F12,
-                               Key_Home,               Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  Key_RightCurlyBracket, Key_End,          
+                               Key_Home,               Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  Key_End,              Key_RightCurlyBracket,
    Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,         Key_Pipe,
    ___, ___, Key_Delete, ___,
    ___)
