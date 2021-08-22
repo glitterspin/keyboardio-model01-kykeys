@@ -145,19 +145,6 @@ enum { MACRO_VERSION_INFO,
 enum { PRIMARY, NUMPAD, FUNCTION }; // layers
 
 
-/**
-  * To change your keyboard's layout from QWERTY to DVORAK or COLEMAK, comment out the line
-  *
-  * #define PRIMARY_KEYMAP_QWERTY
-  *
-  * by changing it to
-  *
-  * // #define PRIMARY_KEYMAP_QWERTY
-  *
-  * Then uncomment the line corresponding to the layout you want to use.
-  *
-  */
-
 #define PRIMARY_KEYMAP_QWERTY
 // #define PRIMARY_KEYMAP_COLEMAK
 // #define PRIMARY_KEYMAP_DVORAK
@@ -174,18 +161,18 @@ KEYMAPS(
 
 #if defined (PRIMARY_KEYMAP_QWERTY)
   [PRIMARY] = KEYMAP_STACKED
-  (Key_Backtick, Key_1, Key_2, Key_3, Key_4, Key_5, Key_CapsLock,
-   Key_Tab,      Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Spacebar,
+  (Key_Backtick, Key_1, Key_2, Key_3, Key_4, Key_5, LSHIFT(LGUI(Key_S)),
+   Key_Tab,      Key_Q, Key_W, Key_E, Key_R, Key_T, Key_CapsLock,
    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,
    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
-    Key_LeftControl, Key_Backspace, Key_LeftShift, Key_LeftAlt, 
+    Key_LeftControl, Key_Spacebar, Key_LeftShift, Key_LeftAlt, 
    ShiftToLayer(FUNCTION),
 
-   M(MACRO_ANY),          Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
+   LockLayer(NUMPAD),     Key_6, Key_7, Key_8,     Key_9,         Key_0,         Key_LEDEffectNext,
    Key_LEDEffectNext,     Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
                           Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
    Key_RightAlt,          Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
-          Key_LeftGui, Key_RightShift, Key_Spacebar, Key_Enter,
+          Key_LeftGui, Key_RightShift, Key_Backspace, Key_Enter,
    ShiftToLayer(FUNCTION)),
 
 #elif defined (PRIMARY_KEYMAP_CUSTOM)
@@ -221,7 +208,7 @@ KEYMAPS(
    ___, ___, ___, ___,
    ___,
 
-   M(MACRO_VERSION_INFO),  ___, Key_7, Key_8,      Key_9,              Key_KeypadSubtract, ___,
+   LockLayer(1),           ___, Key_7, Key_8,      Key_9,              Key_KeypadSubtract, ___,
    ___,                    ___, Key_4, Key_5,      Key_6,              Key_KeypadAdd,      ___,
                            ___, Key_1, Key_2,      Key_3,              Key_Equals,         ___,
    ___,                    ___, Key_0, Key_Period, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter,
@@ -229,18 +216,18 @@ KEYMAPS(
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (Key_LEDEffectNext, Key_F1,           Key_F2,      Key_F3,           Key_F4,        Key_F5,          ___,
-   Key_Tab,           ___,              Key_mouseUp, Key_mouseWarpEnd, Key_mouseBtnR, Key_mouseWarpNW, Key_mouseWarpNE,
-   Key_Home,          Key_mouseL,       Key_mouseDn, Key_mouseR,       Key_mouseBtnL, Key_mouseWarpW,
-   Key_End,           Key_PrintScreen,  Key_Insert,  ___,              Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
+  (Key_LEDEffectNext, Key_F1,           Key_F2,           Key_F3,           Key_F4,        Key_F5,          ___,
+   Key_Tab,           ___,              Key_mouseUp,      Key_mouseWarpEnd, Key_mouseBtnR, Key_mouseWarpNW, Key_mouseWarpNE,
+   Key_mouseScrollUp, Key_mouseL,       Key_mouseDn,      Key_mouseR,    Key_mouseBtnL,   Key_mouseWarpW,
+   Key_mouseScrollDn, Key_PrintScreen,  Key_Insert,       ___,           Key_mouseBtnM,   Key_mouseWarpSW,  Key_mouseWarpSE,
    ___, Key_Delete, ___, ___,
    ___,
 
-   Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
-   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
-                               Key_Home,               Key_LeftArrow,            Key_DownArrow,            Key_UpArrow,     Key_RightArrow,   Key_End,
-   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
-   ___, ___, ___, ___,
+   Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,               Key_F11,
+   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_UpArrow,              Key_LeftBracket, Key_RightBracket,      Key_F12,
+                               Key_Home,               Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  Key_RightCurlyBracket, Key_End,          
+   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,         Key_Pipe,
+   ___, ___, Key_Delete, ___,
    ___)
 ) // KEYMAPS(
 
