@@ -218,8 +218,8 @@ KEYMAPS(
  
   [FUNCTION] =  KEYMAP_STACKED
   (Key_LEDEffectNext, Key_F1,           Key_F2,          Key_F3,         Key_F4,          Key_F5,           Key_mouseWarpNE,
-   ___,               ___,              Key_mouseBtnR,   Key_mouseUp,    Key_mouseWarpNW, Key_mouseWarpNE,  Key_mouseScrollUp, 
-   Key_mouseScrollUp, Key_mouseBtnL,    Key_mouseL,      Key_mouseDn,    Key_mouseR,      Key_mouseWarpSE,
+   ___,               ___,              Key_mouseBtnR,   Key_UpArrow,    ___,             ___,              Key_mouseScrollUp, 
+   Key_mouseScrollUp, Key_mouseBtnL,    Key_LeftArrow,   Key_DownArrow,  Key_RightArrow,  ___,
    Key_mouseScrollDn, Key_PrintScreen,  Key_Insert,      ___,            Key_mouseBtnM,   Key_mouseWarpSW,  Key_mouseR,
    ___,  Key_Delete, ___,  ___,
    ___,
